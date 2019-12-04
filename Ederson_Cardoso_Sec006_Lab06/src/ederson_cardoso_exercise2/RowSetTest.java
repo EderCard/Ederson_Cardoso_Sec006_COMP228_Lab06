@@ -30,7 +30,7 @@ public class RowSetTest {
 	 * @param query
 	 */
 	private static void executeQuery(String query) {
-		// connect to database books and query database
+		// try with resources to handle connection
 		try (JdbcRowSet rowSet = RowSetProvider.newFactory().createJdbcRowSet()) {
 
 			// specify JdbcRowSet properties
